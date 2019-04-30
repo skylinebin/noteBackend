@@ -1,6 +1,6 @@
 /*****
  * 
- * 请求笔记相关的接口
+ * 请求笔记相关的具体实现接口
  * 
  * ***** */
 
@@ -26,7 +26,7 @@ module.exports = class BaseFun {
      * 成功后返回所有列表数据
      */
     static addnewRecord(noterecord, callback) {
-        //函数作用域
+        //函数作用域, 便于后续异步请求
         const that = this;
         const connection = mysql.createConnection(mysqlurl);
         //执行连接数据库

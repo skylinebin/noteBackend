@@ -32,6 +32,7 @@ app.use('/getnotelist', (request, response, next) => {
             response.writeHead(200, {
                 'Content-Type': 'application/json'
             });
+            // 用于格式化返回数据，便于前端处理请求
             var backdatas = new Ibase("正常：操作成功!", true, getlistresult);
             response.end(JSON.stringify(backdatas));
         } else {
@@ -62,6 +63,7 @@ app.use('/addonenote', (request, response, next) => {
             response.writeHead(200, {
                 'Content-Type': 'application/json'
             });
+            // 用于格式化返回数据，便于前端处理请求
             var backdatas = new Ibase("正常：操作成功!", true, addrecord);
             response.end(JSON.stringify(backdatas));
         } else {
